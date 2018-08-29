@@ -239,7 +239,7 @@ body {
 	font-family: $font-light;
   font-size: 16px;
   font-size: calc(11px + .46vw);
-  line-height: 1.2;
+  line-height: 1.3;
   font-weight: normal;
   color: $forest;
   background: $white;
@@ -250,12 +250,24 @@ body {
   a {
     text-decoration: none;
     color: $teal;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background: $teal;
+      position: absolute;
+      bottom: -2px;
+      left: 0px;
+      transition: 220ms transform ease;
+      transform-origin: left center;
+    }
 
     &:hover {
-      color: $forest;
 
-      .st1 {
-        fill: $forest;
+      &::after {
+        transform: scaleX(0);
       }
     }
   }
@@ -318,6 +330,7 @@ h2 {
 
 h3 {
   font-size: 2.5em;
+  line-height: 1.36;
 }
 
 h4 {
@@ -443,6 +456,12 @@ header, footer {
     flex: 1;
     position: absolute;
 
+    a {
+      &::after {
+        display: none;
+      }
+    }
+
     svg {
       width: calc(108px + 2vw);
       height: auto;
@@ -531,22 +550,36 @@ main {
       font-size: 6.6em;
       color: $gold;
       line-height: .9;
+      z-index: 10;
     }
 
     figure {
       width: 42.857vw;
+      height: 100vh;
       margin-left: 35.714vw;
       background: black;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
   .hero-logo {
     position: fixed;
     bottom: 0px;
     left: $margin;
+    opacity: 0;
+    transition: opacity 440ms ease;
 
     svg {
       width: calc(60px + 2vw);
       height: auto;
+    }
+
+    &.show {
+      opacity: 1;
     }
   }
   .about-home {
@@ -556,12 +589,71 @@ main {
     }
   }
 
+  .call-out-home {
+    position: relative;
+
+    figure {
+      margin-left: 10.714vw;
+      width: 39.285vw;
+    }
+
+    h2 {
+      position: absolute;
+      top: 0px;
+      left: 39.285vw;
+      width: 50vw;
+      color: $gold;
+      font-family: $font-medium;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 1.5em;
+      line-height: 1.36em;
+    }
+  }
+
   .faqs-home {
     width: 67.857vw;
+
+    h3, figure p {
+      margin: 0px $margin;
+    }
+
+    .count {
+      width: 10.714vw;
+    }
+
+    .image {
+      width: 14.285vw;
+
+      figure {
+        img {
+          border-radius: 50%;
+          overflow: hidden;
+        }
+        display: none;
+      }
+    }
+
+    .content {
+      width: 42.857vw;
+
+      .description {
+        font-size: 1.2em;
+        display: none;
+      }
+    }
   }
 
   .learn-more-home {
     width: 32.142vw;
+    padding-right: $margin;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+
+    figure {
+      margin: 0 $margin;
+    }
   }
 }
 
@@ -580,7 +672,6 @@ main {
 
 footer {
   width: 100vw;
-  padding-top: 14vh;
 
   p, h5 {
     margin-right: 0px;
