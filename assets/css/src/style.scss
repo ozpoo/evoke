@@ -60,7 +60,7 @@
   	font-size:inherit;
   	line-height:inherit;
   	white-space:normal;
-  	vertical-align:middle;
+    outline: none;
   }
 
   select, input {
@@ -191,6 +191,7 @@ $black: rgb(0,0,0);
 $gold: #b7ab87;
 $forest: #3c6160;
 $teal: #2fa0a0;
+$margin-s: 1.7855vw;
 $margin: 3.571vw;
 $margin-02: calc(10px + 1.2vw);
 $margin-03: calc(4px + .4vw);
@@ -330,7 +331,7 @@ h2 {
 
 h3 {
   font-size: 2.5em;
-  line-height: 1.36;
+  line-height: 1.16;
 }
 
 h4 {
@@ -396,6 +397,13 @@ small {
 
 .st2 {
   fill: $white;
+}
+
+.st3 {
+  fill:none;
+  stroke:#FFFFFF;
+  stroke-width:0.75;
+  stroke-miterlimit:10;
 }
 
 .loader {
@@ -539,6 +547,200 @@ main {
   }
 }
 
+.about {
+  .hero {
+    position: relative;
+
+    h1 {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-size: 6.6em;
+      color: $gold;
+      line-height: .9;
+      z-index: 10;
+    }
+
+    figure {
+      width: 53.571vw;
+      margin-left: 39.286vw;
+      background: black;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .hero-logo {
+    text-align: right;
+    display: block;
+
+    p {
+      margin-top: 0px;
+    }
+
+    svg {
+      width: calc(60px + 2vw);
+      height: auto;
+      display: inline-block;
+      margin-right: 14.286vw;
+      margin-top: -2vw;
+    }
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  .life {
+    margin-left: 7.143vw;
+    margin-right: 21.429vw;
+
+    h2 {
+      margin-bottom: $margin-s;
+    }
+
+    h3 {
+      margin-top: $margin-s;
+      margin-bottom: $margin-s;
+    }
+
+    button {
+      text-decoration: none;
+      color: $teal;
+      position: relative;
+      vertical-align: bottom;
+      display: inline-block;
+      line-height: inherit;
+
+      &::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: $teal;
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        transition: 220ms transform ease;
+        transform-origin: left center;
+      }
+
+      &:hover {
+
+        &::after {
+          transform: scaleX(0);
+        }
+      }
+    }
+
+    p {
+      &.teaser {
+        margin-top: $margin-s;
+        margin-bottom: $margin-s;
+      }
+    }
+
+    .toggle {
+      display: none;
+
+      font-size: 1.2em;
+    }
+  }
+
+  .path {
+
+    .frame {
+      margin: $margin;
+      margin-left: 7.143vw;
+      width: 53.571vw;
+    }
+  }
+
+  h2 {
+
+    &.main {
+      margin-left: 10.714vw;
+      margin-right: 21.429vw;
+      margin-bottom: 0px;
+      color: #b7ab87;
+      font-family: $font-medium;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 1.5em;
+      line-height: 1.36em;
+    }
+  }
+
+  .experiences {
+    margin-left: 7.143vw;
+    margin-right: 21.429vw;
+
+    button {
+      text-decoration: none;
+      color: $teal;
+      position: relative;
+      vertical-align: bottom;
+      display: inline-block;
+      line-height: inherit;
+
+      &::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: $teal;
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        transition: 220ms transform ease;
+        transform-origin: left center;
+      }
+
+      &:hover {
+
+        &::after {
+          transform: scaleX(0);
+        }
+      }
+    }
+
+    p {
+      margin-top: 0px;
+      margin-bottom: $margin-s;
+    }
+
+    h2 {
+      margin-bottom: $margin-s;
+    }
+
+    .healthcare, .additional-study, .philanthropy {
+      flex: 1;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+
+      img {
+        width: 100%;
+        max-width: 120px;
+        margin-bottom: $margin-s;
+      }
+
+      .toggle {
+        display: none;
+      }
+
+      .title {
+        font-size: .8em;
+      }
+
+      .description {
+        font-size: .8em;
+        color: #acabab;
+      }
+    }
+  }
+}
+
 .home {
   .hero {
     position: relative;
@@ -556,35 +758,40 @@ main {
     figure {
       width: 42.857vw;
       height: 100vh;
-      margin-left: 35.714vw;
+      margin-left: 42.857vw;
       background: black;
+      overflow: hidden;
 
       img {
         height: 100%;
         width: 100%;
         object-fit: cover;
       }
+
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
     }
   }
   .hero-logo {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     left: $margin;
-    opacity: 0;
-    transition: opacity 440ms ease;
-
     svg {
       width: calc(60px + 2vw);
       height: auto;
     }
-
-    &.show {
-      opacity: 1;
-    }
   }
   .about-home {
 
+    h2 {
+      margin-bottom: $margin-s;
+    }
     h3 {
+      margin-top: $margin-s;
       margin-right: 21.429vw;
     }
   }
@@ -613,6 +820,10 @@ main {
 
   .faqs-home {
     width: 67.857vw;
+
+    h2 {
+      margin-bottom: $margin-s;
+    }
 
     h3, figure p {
       margin: 0px $margin;
@@ -651,17 +862,91 @@ main {
     top: 0;
     align-self: flex-start;
 
+    h2 {
+      margin-bottom: $margin-s;
+    }
+
+    p {
+      margin-bottom: $margin-s;
+      margin-top: $margin-s;
+    }
+
     figure {
       margin: 0 $margin;
     }
   }
 }
 
-.single {
+.contact {
 
+  footer {
+    width: 100vw;
+
+    .session-clickbait {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: 6.6em;
+    line-height: .9;
+  }
+
+  .form {
+    flex-flow: row;
+
+    br {
+      display: none;
+    }
+
+    div {
+      flex: 1;
+    }
+
+    h2 {
+      margin-bottom: $margin-s;
+    }
+    p {
+      margin-top: $margin-s;
+      margin-bottom: $margin-s;
+    }
+
+    .right {
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+
+      .callout {
+        margin-right: 14.286vw;
+      }
+    }
+
+    .left {
+     label {
+        width: 100%;
+      }
+      input[type=text], input[type=email], textarea {
+        background: #f4f4f4;
+        width: 100%;
+        padding: $margin-s;
+        border: 1px solid transparent;
+
+        &:focus, &:hover {
+          border: 1px solid $gold;
+        }
+      }
+      input[type=submit] {
+        margin-top: $margin-s;
+        line-height: 1;
+        background: $teal;
+        color: $white;
+        padding: calc(8px + .6vw) calc(16px + .6vw);
+      }
+    }
+  }
 }
 
-.about {
+.single {
 
 }
 
@@ -673,8 +958,42 @@ main {
 footer {
   width: 100vw;
 
+  .session-clickbait {
+    position: fixed;
+    bottom: $margin;
+    right: $margin;
+    z-index: 100;
+
+    a {
+      display: inline-block;
+      line-height: 1;
+      background: $gold;
+      color: $white;
+      padding: calc(8px + .6vw) calc(16px + .6vw);
+
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: $margin;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
   p, h5 {
     margin-right: 0px;
+  }
+
+  h5 {
+    margin-bottom: 0px;
+  }
+
+  p {
+    margin-top: $margin-s;
+    margin-bottom: $margin-s;
   }
 
   .contact-footer {
@@ -706,7 +1025,7 @@ footer {
   width: 100vw;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  transition: opacity 1200ms cubic-bezier(.165, .84, .44, 1);
+  transition: opacity 660ms cubic-bezier(.165, .84, .44, 1);
   backface-visibility: hidden;
   color: $white;
 
@@ -714,6 +1033,13 @@ footer {
     position: fixed;
     top: 0px;
     right: 0px;
+
+    button {
+      line-height: 1;
+      background: $black;
+      color: $white;
+      padding: calc(8px + .6vw) calc(16px + .6vw);
+    }
   }
 
   .flex {
@@ -733,6 +1059,17 @@ footer {
       display: block;
       color: white;
       backface-visibility: hidden;
+    }
+  }
+
+  .main-menu {
+    a {
+      font-size: 4.6em;
+      line-height: 1.16;
+      font-family: "Austin-Light";
+      &:after {
+        display: none;
+      }
     }
   }
 

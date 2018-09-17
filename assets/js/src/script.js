@@ -28,18 +28,17 @@
 			setBackground($("#site-content-wrap"));
 			setFlky();
 			setListeners();
+			setVideos();
 			AOS.init();
 			reveal();
-			setTimeout(function(){
-				$(".intro").removeClass("show");
-			}, 800);
+			$(".intro").removeClass("show");
 		};
 
 		var setSmoothState = function() {
 			$options = {
 				prefetch: true,
 				scroll: false,
-				cacheLength: 3,
+				cacheLength: 0,
 				repeatDelay: 500,
 				loadingClass: 'is-loading',
         anchors: 'a',
@@ -51,14 +50,12 @@
 						$container.addClass('is-exiting');
 		        $smoothState.restartCSSAnimations();
 						hide();
-		        setTimeout(function(){
-		          $container.html("");
-		        }, 800);
           }
         },
 				onProgress: {
 			    duration: 0,
 			    render: function ($container) {
+						$container.html("");
 						$(".loader").addClass("show");
 					}
 			  },
@@ -74,16 +71,16 @@
 						$container.removeClass('is-exiting');
 						doScroll();
 						setBackground($newContent);
-						setTimeout(function($newContent) {
-							$container.html($newContent);
-							setFlky();
-							setListeners();
-							AOS.init();
-							reveal();
-						}, 800, $newContent);
 					}
 				},
-        onAfter: function( $container, $newContent ) { }
+        onAfter: function( $container, $newContent ) {
+					$container.html($newContent);
+					setFlky();
+					setListeners();
+					setVideos();
+					AOS.init();
+					reveal();
+				}
       };
 			$smoothState = $('#page').smoothState($options).data('smoothState');
 		}
@@ -139,14 +136,40 @@
 		  $scrollTo = history.state.scrollTop;
 		};
 
+		var setVideos = function() {
+			$('.lazy-video').each(function(){
+				// console.log("video");
+				// if(!mobileCheck()) {
+					addSourceToVideo($(this));
+				// }
+			});
+		};
+
+		var addSourceToVideo = function(element) {
+			var source, src, type;
+
+			source = $('<source/>');
+			src = $(element).attr("data-src-webm");
+			type = "video/webm";
+
+			$(source).attr("src", src);
+			$(source).attr("type", type);
+			$(element).append(source);
+			$(element).load();
+
+			source = $('<source/>');
+			src = $(element).attr("data-src-mp4");
+			type = "video/mp4";
+
+			$(source).attr("src", src);
+			$(source).attr("type", type);
+			$(element).append(source);
+			$(element).load();
+		};
+
 		var animate =  function() {
 			requestAnimationFrame( animate );
 			$scrollTop = $(document).scrollTop();
-			if($scrollTop > 80) {
-				$(".hero-logo").removeClass("show");
-			} else {
-				$(".hero-logo").addClass("show");
-			}
 			if($(document).height() - $scrollTop < $(window).height() * 1.5) {
 				setMenuTransform("show");
 			} else if($scrollTop < $("header").height() * 2) {
@@ -191,6 +214,12 @@
 			});
 			$('.faq-toggle').on( 'click', function() {
 			  $(this).closest(".faq").find(".description, figure").fadeToggle();
+			});
+			$('.about-toggle').on( 'click', function() {
+			  $(this).closest(".about").find(".toggle").fadeToggle();
+			});
+			$('.hc-toggle').on( 'click', function() {
+			  $(this).closest(".healthcare").find(".toggle").fadeToggle();
 			});
 		};
 
