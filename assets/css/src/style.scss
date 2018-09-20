@@ -471,7 +471,7 @@ header, footer {
     }
 
     svg {
-      width: calc(108px + 2vw);
+      width: calc(78px + 4vw);
       height: auto;
       vertical-align: middle;
       display: inline-block;
@@ -559,7 +559,7 @@ main {
       position: absolute;
       top: 0px;
       left: 0px;
-      font-size: 6.6em;
+      font-size: 6.2em;
       color: $gold;
       line-height: .9;
       z-index: 10;
@@ -757,7 +757,7 @@ main {
       position: absolute;
       top: 0px;
       left: 0px;
-      font-size: 6.6em;
+      font-size: 6.2em;
       color: $gold;
       line-height: .9;
       z-index: 10;
@@ -767,7 +767,6 @@ main {
       width: 42.857vw;
       height: 100vh;
       margin-left: 42.857vw;
-      background: black;
       overflow: hidden;
 
       img {
@@ -784,15 +783,7 @@ main {
       }
     }
   }
-  .hero-logo {
-    position: absolute;
-    bottom: 0px;
-    left: $margin;
-    svg {
-      width: calc(60px + 2vw);
-      height: auto;
-    }
-  }
+
   .about-home {
 
     h2 {
@@ -993,6 +984,11 @@ footer {
     right: $margin;
     z-index: 100;
 
+    .text, .arrow {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
     a {
       display: inline-block;
       line-height: 1;
@@ -1080,7 +1076,7 @@ footer {
     left: 0px;
 
     svg {
-      width: calc(108px + 2vw);
+      width: calc(78px + 4vw);
       height: auto;
       vertical-align: middle;
       display: inline-block;
@@ -1128,7 +1124,407 @@ footer {
 }
 
 @media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 3.5em;
+  }
 
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: 2em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+  }
+
+  .home {
+    .hero {
+      position: relative;
+
+      h1 {
+        position: inherit;
+        top: auto;
+        left: auto;
+        font-size: 4.2em;
+        line-height: 1;
+      }
+
+      figure {
+        width: 100vw;
+        height: 60vh;
+        margin-left: 0vw;
+      }
+    }
+
+    .about-home {
+
+      h2 {
+        margin-bottom: $margin;
+      }
+      h3 {
+        margin-top: $margin;
+        margin-right: auto;
+      }
+    }
+
+    .call-out-home {
+      position: relative;
+
+      figure {
+        margin-left: 0vw;
+        width: 100vw;
+      }
+
+      h2 {
+        position: inherit;
+        top: auto;
+        left: auto;
+        width: auto;
+        color: $gold;
+        font-family: $font-medium;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        font-size: 1.2em;
+        line-height: 1.36em;
+      }
+    }
+
+    .faqs-home {
+      width: 100vw;
+
+      h2 {
+        margin-bottom: $margin;
+      }
+
+      h3, figure p {
+        margin: 0px $margin;
+      }
+
+      .faq {
+        button {
+          padding-bottom: $margin;
+
+          &:hover {
+            h3 {
+              color: $gold;
+            }
+          }
+        }
+      }
+
+      .count {
+        width: 12vw;
+      }
+
+      .image {
+        width: 0vw;
+
+        figure {
+          img {
+            border-radius: 50%;
+            overflow: hidden;
+          }
+          display: none;
+        }
+      }
+
+      .content {
+        width: 88vw;
+        margin-left: 12vw;
+
+        .description {
+          font-size: 1.2em;
+          display: none;
+
+          p {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+
+    .learn-more-home {
+      width: 100vw;
+      padding-right: $margin;
+      position: inherit;
+      top: auto;
+      align-self: flex-start;
+
+      h2 {
+        margin-bottom: $margin;
+      }
+
+      p {
+        margin-bottom: $margin;
+        margin-top: $margin;
+      }
+
+      figure {
+        margin: 0 $margin;
+      }
+    }
+  }
+
+  footer {
+    width: 100vw;
+    padding-bottom: 12vh;
+
+    .logo p {
+      margin-bottom: $margin;
+      display: none;
+    }
+
+    .session-clickbait {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
+      width: 100%;
+
+      text-align: center;
+
+      .arrow {
+        display: none;
+      }
+
+
+      a {
+        display: block;
+        line-height: 1;
+        background: $gold;
+        color: $white;
+        padding: calc(8px + .6vw) calc(16px + .6vw);
+
+        &:after {
+          display: none;
+        }
+
+        &:hover {
+          background: $forest;
+        }
+      }
+    }
+
+    p, h5 {
+      margin-right: 0px;
+    }
+
+    h5 {
+      margin-bottom: 0px;
+    }
+
+    p {
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+
+    .contact-footer {
+      width: 50vw;
+    }
+
+    .located-at-footer {
+      width: 50vw;
+    }
+
+    .rates-footer {
+      width: 100vw;
+    }
+  }
+
+  .about {
+    .hero {
+      position: relative;
+
+      h1 {
+        position: inherit;
+        top: auto;
+        left: auto;
+        font-size: 4.2em;
+        line-height: 1;
+      }
+
+      figure {
+        width: 100vw;
+        margin-left: 0vw;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .life {
+      margin-left: 0;
+      margin-right: 0vw;
+
+      h2 {
+        margin-bottom: $margin;
+      }
+
+      h3 {
+        margin-top: $margin;
+        margin-bottom: $margin;
+      }
+
+      button {
+        text-decoration: none;
+        color: $teal;
+        position: relative;
+        vertical-align: bottom;
+        display: inline-block;
+        line-height: inherit;
+
+        &::after {
+          content: "";
+          height: 1px;
+          width: 100%;
+          background: $teal;
+          position: absolute;
+          bottom: -2px;
+          left: 0px;
+          transition: 220ms transform ease;
+          transform-origin: left center;
+        }
+
+        &:hover {
+
+          &::after {
+            transform: scaleX(0);
+          }
+        }
+      }
+
+      p {
+        &.teaser {
+          margin-top: $margin;
+          margin-bottom: $margin;
+        }
+      }
+
+      .toggle {
+        display: none;
+
+        font-size: 1.2em;
+      }
+    }
+
+    .path {
+
+      .frame {
+        margin: $margin;
+        width: auto;
+      }
+    }
+
+    h2 {
+
+      &.main {
+        margin: $margin;
+        color: $gold;
+        font-family: $font-medium;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        font-size: 1.2em;
+        line-height: 1.36em;
+      }
+    }
+
+    .experiences {
+      margin-left: 0;
+      margin-right: 0;
+
+      button {
+        text-decoration: none;
+        color: $teal;
+        position: relative;
+        vertical-align: bottom;
+        display: inline-block;
+        line-height: inherit;
+
+        &::after {
+          content: "";
+          height: 1px;
+          width: 100%;
+          background: $teal;
+          position: absolute;
+          bottom: -2px;
+          left: 0px;
+          transition: 220ms transform ease;
+          transform-origin: left center;
+        }
+
+        &:hover {
+
+          &::after {
+            transform: scaleX(0);
+          }
+        }
+      }
+
+      p {
+        margin-top: 0px;
+        margin-bottom: $margin;
+      }
+
+      h2 {
+        margin-bottom: $margin;
+      }
+
+      .healthcare, .additional-study, .philanthropy {
+        flex: none;
+        position: inherit;
+        top: auto;
+        align-self: flex-start;
+
+        figure {
+          margin-left: $margin;
+          margin-right: $margin;
+
+          img {
+            width: 100%;
+            max-width: none;
+            margin-bottom: $margin-s;
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+
+        .toggle {
+          display: none;
+        }
+
+        .title {
+          font-size: .8em;
+          line-height: 1.3;
+          display: block;
+        }
+
+        .description {
+          font-size: .8em;
+          color: #acabab;
+          line-height: 1.3;
+          display: block;
+        }
+      }
+
+      .healthcare {
+        width: 100%;
+      }
+
+      .additional-study, .philanthropy {
+        width: 50%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 620px) {

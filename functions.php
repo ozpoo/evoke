@@ -5,8 +5,7 @@
 
 if (function_exists('add_theme_support')) {
   add_theme_support('menus');
-  add_theme_support('post-thumbnails');
-
+  add_theme_support( 'title-tag' );
   add_theme_support('post-thumbnails');
   add_image_size('w12',   2880, '', true);
   add_image_size('w11',   2560, '', true);
@@ -132,6 +131,12 @@ function remove_thumbnail_dimensions( $html ) {
   $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
   return $html;
 }
+
+// Move Yoast to bottom
+function yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 
 add_action('init', 'header_scripts'); // Add Custom Scripts to wp_head
 add_action('wp_print_scripts', 'conditional_scripts'); // Add Conditional Page Scripts
