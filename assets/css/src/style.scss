@@ -1087,17 +1087,6 @@ footer {
     }
   }
 
-  .links {
-    font-size: 1.8em;
-    font-weight: 300;
-
-    a {
-      display: block;
-      color: white;
-      backface-visibility: hidden;
-    }
-  }
-
   .main-menu {
     text-align: center;
 
@@ -1107,6 +1096,9 @@ footer {
       font-family: "Austin-Light";
       &:after {
         display: none;
+      }
+      &:hover {
+        color: $forest;
       }
     }
   }
