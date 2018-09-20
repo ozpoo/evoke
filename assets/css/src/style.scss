@@ -1124,8 +1124,13 @@ footer {
 }
 
 @media only screen and (max-width: 720px) {
+
   $margin-s: 2.5vw;
   $margin: 5vw;
+
+  p, ul, ol, h1, h2, h3, h4, h5 {
+    margin: $margin $margin;
+  }
 
   header {
     position: sticky;
