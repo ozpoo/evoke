@@ -213,13 +213,13 @@
 			  $(".menu-modal").toggleClass("show");
 			});
 			$('.faq-toggle').on( 'click', function() {
-			  $(this).closest(".faq").find(".description, figure").fadeToggle();
+			  $(this).closest(".faq").find(".description").fadeToggle("slow", "linear");
 			});
 			$('.about-toggle').on( 'click', function() {
-			  $(this).closest(".about").find(".toggle").fadeToggle();
+			  $(this).closest(".about").find(".toggle").fadeToggle("slow", "linear");
 			});
 			$('.hc-toggle').on( 'click', function() {
-			  $(this).closest(".healthcare").find(".toggle").fadeToggle();
+			  $(this).closest(".healthcare").find(".toggle").fadeToggle("slow", "linear");
 			});
 		};
 

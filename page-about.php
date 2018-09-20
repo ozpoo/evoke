@@ -21,7 +21,7 @@
 				<p class="teaser" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
 					<button class="about-toggle">Read more</button> about Barabara's unique life experience.
 				</p>
-				<div class="toggle" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+				<div class="toggle">
 					<?php echo get_field('about_text'); ?>
 				</div>
 			</section>
@@ -52,24 +52,26 @@
 						<?php if( have_rows('healthcare') ): ?>
 						<?php while ( have_rows('healthcare') ) : the_row(); ?>
 
-							<div class="panel<?php if($count++ > 3) { echo ' toggle'; } ?>"  data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
-								<figure>
-									<?php $img = get_sub_field('image'); ?>
-									<?php $img_src = wp_get_attachment_image_src($img, 'w0l')[0]; ?>
-									<?php $img_srcset = wp_get_attachment_image_srcset($img, 'w02'); ?>
-									<?php $img_alt = get_post_meta( $img, '_wp_attachment_image_alt', true); ?>
-									<?php $img_caption = wp_get_attachment_caption( $img ); ?>
-									<img
-										alt="<?php echo $img_alt; ?>"
-										sizes="auto"
-										src="<?php echo esc_url($img_src); ?>"
-										data-srcset="<?php echo esc_attr($img_srcset); ?>"
-										class="lazyload"/>
-								</figure>
-								<p>
-									<span class="title"><?php the_sub_field('title'); ?></span>
-									<span class="description"><?php the_sub_field('description'); ?></span>
-								</p>
+							<div class="panel<?php if($count++ > 3) { echo ' toggle'; } ?>">
+								<div data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+									<figure>
+										<?php $img = get_sub_field('image'); ?>
+										<?php $img_src = wp_get_attachment_image_src($img, 'w0l')[0]; ?>
+										<?php $img_srcset = wp_get_attachment_image_srcset($img, 'w02'); ?>
+										<?php $img_alt = get_post_meta( $img, '_wp_attachment_image_alt', true); ?>
+										<?php $img_caption = wp_get_attachment_caption( $img ); ?>
+										<img
+											alt="<?php echo $img_alt; ?>"
+											sizes="auto"
+											src="<?php echo esc_url($img_src); ?>"
+											data-srcset="<?php echo esc_attr($img_srcset); ?>"
+											class="lazyload"/>
+									</figure>
+									<p>
+										<span class="title"><?php the_sub_field('title'); ?></span>
+										<span class="description"><?php the_sub_field('description'); ?></span>
+									</p>
+								</div>
 							</div>
 
 						<?php endwhile; endif; ?>

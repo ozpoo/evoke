@@ -200,7 +200,7 @@ $font-regular: "BasisGrotesquePro";
 $font-medium: "BasisGrotesquePro-Medium";
 
 ::selection {
-	background: $black;
+	background: $gold;
 	color: $white;
 	text-shadow: none;
 }
@@ -511,6 +511,10 @@ header {
           background: $teal;
           color: $white;
           padding: calc(8px + .6vw) calc(16px + .6vw);
+
+          &:hover {
+            background: $forest;
+          }
         }
       }
     }
@@ -833,6 +837,18 @@ main {
       margin: 0px $margin;
     }
 
+    .faq {
+      button {
+        padding-bottom: $margin-s;
+
+        &:hover {
+          h3 {
+            color: $gold;
+          }
+        }
+      }
+    }
+
     .count {
       width: 10.714vw;
     }
@@ -851,10 +867,15 @@ main {
 
     .content {
       width: 42.857vw;
+      margin-left: 25vw;
 
       .description {
         font-size: 1.2em;
         display: none;
+
+        p {
+          margin-top: 0px;
+        }
       }
     }
   }
@@ -981,12 +1002,16 @@ footer {
 
       svg {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: text-bottom;
         margin-left: $margin;
       }
 
       &:after {
         display: none;
+      }
+
+      &:hover {
+        background: $forest;
       }
     }
   }
@@ -1022,10 +1047,6 @@ footer {
   z-index: 1000;
   pointer-events: none;
   background: $gold;
-  width: 100vw;
-  position: sticky;
-  left: 0;
-  padding: 14vh $margin;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -1036,6 +1057,9 @@ footer {
   transition: opacity 660ms cubic-bezier(.165, .84, .44, 1);
   backface-visibility: hidden;
   color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .close {
     position: fixed;
@@ -1044,18 +1068,22 @@ footer {
 
     button {
       line-height: 1;
-      background: $black;
+      background: $forest;
       color: $white;
       padding: calc(8px + .6vw) calc(16px + .6vw);
     }
   }
 
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
+  .logo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
 
-    .column {
-      flex: 1;
+    svg {
+      width: calc(108px + 2vw);
+      height: auto;
+      vertical-align: middle;
+      display: inline-block;
     }
   }
 
@@ -1071,6 +1099,8 @@ footer {
   }
 
   .main-menu {
+    text-align: center;
+
     a {
       font-size: 4.6em;
       line-height: 1.16;
@@ -1082,12 +1112,7 @@ footer {
   }
 
   ul {
-    padding-top: 0;
-    padding-bottom: $margin-02;
-
-    ul {
-      padding-top: $margin-02;
-    }
+    padding: 0px;
   }
 
   a {
