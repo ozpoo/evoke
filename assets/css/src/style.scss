@@ -1124,6 +1124,14 @@ footer {
 }
 
 @media only screen and (max-width: 720px) {
+
+  .cap {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-family: $font-medium;
+    font-size: .9em;
+  }
+
   h1 {
     font-size: 3.5em;
   }
@@ -1301,7 +1309,7 @@ footer {
         line-height: 1;
         background: $gold;
         color: $white;
-        padding: calc(8px + 4vw) calc(16px + 4vw);
+        padding: calc(8px + 3vw) calc(16px + 3vw);
 
         &:after {
           display: none;
