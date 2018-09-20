@@ -909,7 +909,7 @@ main {
   }
 
   .form {
-    flex-flow: row;
+    flex-flow: row-reverse;
 
     br {
       display: none;
@@ -942,6 +942,7 @@ main {
         width: 100%;
       }
       input[type=text], input[type=email], textarea {
+        box-sizing: border-box;
         background: #f4f4f4;
         width: 100%;
         padding: $margin-s;
@@ -952,7 +953,7 @@ main {
         }
       }
       input[type=submit] {
-        margin-top: $margin-s;
+        margin-top: $margin;
         line-height: 1;
         background: $teal;
         color: $white;
@@ -973,6 +974,12 @@ main {
 
 footer {
   width: 100vw;
+
+  a {
+    &:after {
+      display: none;
+    }
+  }
 
   .logo p {
     margin-bottom: $margin;
@@ -1683,6 +1690,78 @@ footer {
       pointer-events: all;
     }
   }
+
+  .contact {
+
+    footer {
+      width: 100vw;
+
+      .session-clickbait {
+        display: none;
+      }
+    }
+
+    h1 {
+      font-size: 4.2em;
+      line-height: .9;
+    }
+
+    .form {
+      display: block;
+
+      br {
+        display: none;
+      }
+
+      div {
+        flex: none;
+      }
+
+      h2 {
+        margin-bottom: $margin-s;
+      }
+      p {
+        margin-top: $margin-s;
+        margin-bottom: $margin-s;
+      }
+
+      .right {
+        width: 100%;
+        position: inherit;
+        top: auto;
+        align-self: flex-start;
+
+        .callout {
+          margin: 0;
+        }
+      }
+
+      .left {
+        width: 100%;
+
+       label {
+          width: 100%;
+        }
+        input[type=text], input[type=email], textarea {
+          background: #f4f4f4;
+          width: 100%;
+          padding: $margin-s;
+          border: 1px solid transparent;
+
+          &:focus, &:hover {
+            border: 1px solid $gold;
+          }
+        }
+        input[type=submit] {
+          margin-top: $margin;
+          line-height: 1;
+          background: $teal;
+          color: $white;
+          padding: calc(8px + .6vw) calc(16px + .6vw);
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 620px) {
@@ -1707,6 +1786,14 @@ footer {
         font-size: 3.2em;
         line-height: 1;
       }
+    }
+  }
+
+  .contact {
+
+    h1 {
+      font-size: 3.2em;
+      line-height: .9;
     }
   }
 
