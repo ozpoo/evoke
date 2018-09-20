@@ -1301,7 +1301,7 @@ footer {
         line-height: 1;
         background: $gold;
         color: $white;
-        padding: calc(8px + .6vw) calc(16px + .6vw);
+        padding: calc(8px + 1vw) calc(16px + 1vw);
 
         &:after {
           display: none;
