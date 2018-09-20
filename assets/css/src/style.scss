@@ -1416,8 +1416,8 @@ footer {
     }
 
     .life {
-      margin-left: $margin;
-      margin-right: $margin;
+      margin-left: 0;
+      margin-right: 0;
 
       h2 {
         margin-bottom: $margin;
@@ -1475,6 +1475,11 @@ footer {
       .frame {
         margin: $margin;
         padding: $margin;
+        width: auto;
+
+        img {
+          width: 100%:
+        }
       }
     }
 
