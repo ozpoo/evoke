@@ -1231,7 +1231,7 @@ footer {
       position: relative;
 
       figure {
-        margin: $marin;
+        margin: $margin;
         padding: $margin;
         width: auto;
 
@@ -1422,8 +1422,8 @@ footer {
     }
 
     .life {
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: 0px;
+      margin-right: 0px;
 
       h2 {
         margin-bottom: $margin;
