@@ -1158,7 +1158,7 @@ footer {
             line-height: 1;
             background: $teal;
             color: $white;
-            padding: calc(8px + 3vw) calc(16px + 3vw);
+            padding: calc(8px + 2vw) calc(16px + 2vw);
 
             &:hover {
               background: $forest;
@@ -1359,7 +1359,7 @@ footer {
         line-height: 1;
         background: $gold;
         color: $white;
-        padding: calc(8px + 3vw) calc(16px + 3vw);
+        padding: calc(8px + 2vw) calc(16px + 2vw);
 
         &:after {
           display: none;
@@ -1623,7 +1623,7 @@ footer {
         line-height: 1;
         background: $forest;
         color: $white;
-        padding: calc(8px + 3vw) calc(16px + 3vw);
+        padding: calc(8px + 2vw) calc(16px + 2vw);
       }
     }
 
