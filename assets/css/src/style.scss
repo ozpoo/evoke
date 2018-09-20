@@ -1320,7 +1320,8 @@ footer {
       }
 
       figure {
-        margin: 0 $margin;
+        margin: $margin;
+        padding: $margin;
       }
     }
   }
@@ -1473,11 +1474,7 @@ footer {
 
       .frame {
         margin: $margin;
-        width: 100%;
-
-        img {
-          width: 70%;
-        }
+        padding: $margin;
       }
     }
 
