@@ -17,7 +17,7 @@
 
 			<section class="life">
 				<h2 class="cap gold" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">About Barbara Glass</h2>
-				<h3 data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">Life Strategist Barbara Glass brings extensive life experience to her role as a Life Strategist.</h3>
+				<h3 data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">Barbara Glass brings extensive life experience to her role as a Life Strategist.</h3>
 				<p class="teaser" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
 					<button class="about-toggle">Read more</button> about Barabara's unique life experience.
 				</p>
