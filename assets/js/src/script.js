@@ -112,7 +112,7 @@
 		};
 
 		var resize = function() {
-			$(".menu-modal, .intro").height($(window).height());
+			$(".menu-modal, .intro, .loader").height($(window).height());
 		}
 
 		var hide = function() {
