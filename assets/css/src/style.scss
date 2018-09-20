@@ -1582,6 +1582,81 @@ footer {
       }
     }
   }
+
+  .menu-modal {
+    opacity: 0;
+    z-index: 1000;
+    pointer-events: none;
+    background: $gold;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    transition: opacity 660ms cubic-bezier(.165, .84, .44, 1);
+    backface-visibility: hidden;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .close {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+
+      button {
+        line-height: 1;
+        background: $forest;
+        color: $white;
+        padding: calc(8px + 3vw) calc(16px + 3vw);
+      }
+    }
+
+    .logo {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+
+      svg {
+        width: calc(78px + 4vw);
+        height: auto;
+        vertical-align: middle;
+        display: inline-block;
+      }
+    }
+
+    .main-menu {
+      text-align: center;
+
+      a {
+        font-size: 4.6em;
+        line-height: 1.16;
+        font-family: "Austin-Light";
+        &:after {
+          display: none;
+        }
+        &:hover {
+          color: $forest;
+        }
+      }
+    }
+
+    ul {
+      padding: 0px;
+    }
+
+    a {
+      color: $white;
+    }
+
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }
 
 @media only screen and (max-width: 620px) {
@@ -1589,6 +1664,25 @@ footer {
 }
 
 @media only screen and (max-width: 420px) {
+  .home {
+    .hero {
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1;
+      }
+    }
+  }
+
+  .about {
+    .hero {
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1;
+      }
+    }
+  }
 
 }
 
