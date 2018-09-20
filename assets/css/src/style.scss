@@ -1553,7 +1553,7 @@ footer {
         }
 
         .title {
-          font-size: .8em;
+          font-size: 1em;
           line-height: 1.3;
           display: block;
         }
@@ -1568,6 +1568,10 @@ footer {
 
       .healthcare {
         width: 100%;
+
+        img {
+          width:70%;
+        }
       }
 
       .additional-study, .philanthropy {

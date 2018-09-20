@@ -47,7 +47,7 @@
 			<section class="experiences">
 				<div class="flex">
 					<div class="healthcare">
-						<h2 class="cap gold" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">Healthecare</h2>
+						<h2 class="cap gold" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">Healthcare</h2>
 						<?php $count = 1; ?>
 						<?php if( have_rows('healthcare') ): ?>
 						<?php while ( have_rows('healthcare') ) : the_row(); ?>
