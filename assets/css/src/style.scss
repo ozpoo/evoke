@@ -1313,24 +1313,26 @@ footer {
     }
 
     .learn-more-home {
-      width: 100vw;
-      padding-right: $margin;
+      width: auto;
+      padding: $margin;
+      margin: $margin;
+      padding-top: 0px;
+      margin-top: 0px;
       position: inherit;
       top: auto;
       align-self: flex-start;
+      text-align: center;
 
       h2 {
-        margin-bottom: $margin;
+        margin-bottom: $margin-s;
       }
 
       p {
         margin-bottom: $margin;
-        margin-top: $margin;
+        margin-top: $margin-s;
       }
 
       figure {
-        margin: $margin;
-        padding: $margin;
       }
     }
   }
@@ -1484,6 +1486,8 @@ footer {
         margin: $margin;
         padding: $margin;
         width: auto;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
 
         img {
           width: 100%;
@@ -1501,6 +1505,8 @@ footer {
         letter-spacing: .12em;
         font-size: 1.2em;
         line-height: 1.36em;
+        padding: 0px $margin;
+        text-align: center;
       }
     }
 
