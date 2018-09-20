@@ -13,7 +13,7 @@
 
 
 		$(window).resize(function() {
-
+			resize();
 		});
 
 		var init = function() {
@@ -29,6 +29,7 @@
 			setFlky();
 			setListeners();
 			setVideos();
+			resize();
 			AOS.init();
 			reveal();
 			$(".intro").removeClass("show");
@@ -78,6 +79,7 @@
 					setFlky();
 					setListeners();
 					setVideos();
+					resize();
 					AOS.init();
 					reveal();
 				}
@@ -108,6 +110,10 @@
 			// 	}, 8000);
 			// }
 		};
+
+		var resize = function() {
+			$(".menu-modal, .intro").height($(window).height());
+		}
 
 		var hide = function() {
 			TweenLite.to($("#site-content-wrap"), .4, {autoAlpha:0, delay:0});
