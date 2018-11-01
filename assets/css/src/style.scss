@@ -650,6 +650,14 @@ main {
 
       font-size: 1.2em;
     }
+
+    .texty {
+      font-size: 1.2em;
+
+      p {
+        margin-bottom: 0px;
+      }
+    }
   }
 
   .path {

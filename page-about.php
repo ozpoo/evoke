@@ -18,12 +18,15 @@
 			<section class="life">
 				<h2 class="cap gold" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">About Barbara Glass</h2>
 				<h3 data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">Barbara Glass brings extensive life experience to her role as Life Strategist.</h3>
-				<p class="teaser" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
-					<button class="about-toggle">Read more</button> about Barbara's unique life experience.
-				</p>
+				<div class="texty" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+					<p><?php echo get_field('about_excerpt'); ?></p>
+				</div>
 				<div class="toggle">
 					<?php echo get_field('about_text'); ?>
 				</div>
+				<p class="teaser" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+					<button class="about-toggle">Read more</button> about Barbara's unique life experience.
+				</p>
 			</section>
 
 			<section class="path">
@@ -75,7 +78,7 @@
 							</div>
 
 						<?php endwhile; endif; ?>
-						<p><button class="hc-toggle">More Helathcare +</button></p>
+						<p><button class="hc-toggle">More Healthcare +</button></p>
 					</div>
 					<div class="additional-study">
 						<h2 class="cap gold" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">Additional Study</h2>
