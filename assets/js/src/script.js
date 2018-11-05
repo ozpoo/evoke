@@ -221,6 +221,9 @@
 			$('.faq-toggle').on( 'click', function() {
 			  $(this).closest(".faq").find(".description").fadeToggle("slow", "linear");
 			});
+			$('.testimonial-toggle').on( 'click', function() {
+			  $(this).closest(".testimonial").find(".toggle").fadeToggle("slow", "linear");
+			});
 			$('.about-toggle').on( 'click', function() {
 			  $(this).closest(".about").find(".toggle").fadeToggle("slow", "linear");
 			});
