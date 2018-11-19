@@ -18,6 +18,19 @@
 			<section class="life">
 				<h2 class="cap gold" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">About Barbara Glass</h2>
 				<h3 data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">Barbara Glass brings extensive life experience to her role as Life Strategist.</h3>
+				<figure class="frame" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+					<?php $img = get_field('headshot'); ?>
+					<?php $img_src = wp_get_attachment_image_src($img, 'w0l')[0]; ?>
+					<?php $img_srcset = wp_get_attachment_image_srcset($img, 'w02'); ?>
+					<?php $img_alt = get_post_meta( $img, '_wp_attachment_image_alt', true); ?>
+					<?php $img_caption = wp_get_attachment_caption( $img ); ?>
+					<img
+						alt="<?php echo $img_alt; ?>"
+						sizes="auto"
+						src="<?php echo esc_url($img_src); ?>"
+						data-srcset="<?php echo esc_attr($img_srcset); ?>"
+						class="lazyload"/>
+				</figure>
 				<div class="texty" data-aos="fade-up" data-aos-offset="0" data-aos-once="true" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
 					<p><?php echo get_field('about_excerpt'); ?></p>
 				</div>
